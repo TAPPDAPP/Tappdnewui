@@ -1,0 +1,1102 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #0a0322;
+  --foreground: #ffffff;
+  --card: #0a0322;
+  --card-foreground: #ffffff;
+  --popover: #0a0322;
+  --popover-foreground: #ffffff;
+  --primary: #c451c9;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(196, 81, 201, 0.1);
+  --secondary-foreground: #ffffff;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+  --accent: rgba(196, 81, 201, 0.2);
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.05);
+  --switch-background: rgba(255, 255, 255, 0.2);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #c451c9;
+  --chart-1: #c451c9;
+  --chart-2: #a9016d;
+  --chart-3: #740182;
+  --chart-4: #ffffff;
+  --chart-5: rgba(196, 81, 201, 0.5);
+  --radius: 0.625rem;
+  --sidebar: #0a0322;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #c451c9;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(196, 81, 201, 0.1);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #c451c9;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+.light-theme {
+  --background: #f5f3ff;
+  --foreground: #1a0033;
+  --card: #ffffff;
+  --card-foreground: #1a0033;
+  --popover: #ffffff;
+  --popover-foreground: #1a0033;
+  --primary: #c451c9;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(196, 81, 201, 0.15);
+  --secondary-foreground: #1a0033;
+  --muted: rgba(26, 0, 51, 0.1);
+  --muted-foreground: rgba(26, 0, 51, 0.7);
+  --accent: rgba(196, 81, 201, 0.25);
+  --accent-foreground: #1a0033;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(196, 81, 201, 0.2);
+  --input: transparent;
+  --input-background: rgba(196, 81, 201, 0.05);
+  --switch-background: rgba(196, 81, 201, 0.3);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #c451c9;
+  --chart-1: #c451c9;
+  --chart-2: #a9016d;
+  --chart-3: #740182;
+  --chart-4: #1a0033;
+  --chart-5: rgba(196, 81, 201, 0.5);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a0033;
+  --sidebar-primary: #c451c9;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(196, 81, 201, 0.15);
+  --sidebar-accent-foreground: #1a0033;
+  --sidebar-border: rgba(196, 81, 201, 0.2);
+  --sidebar-ring: #c451c9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Prevent zoom on iOS */
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Prevent horizontal scroll */
+    overflow-x: hidden;
+  }
+
+  html {
+    /* Prevent zoom on inputs in iOS */
+    -webkit-text-size-adjust: 100%;
+    /* Prevent horizontal scroll */
+    overflow-x: hidden;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Mobile-first responsive design */
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 415px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+/* Prevent zoom on form inputs for iOS */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select {
+  font-size: max(16px, 1rem);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Touch optimization */
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth scrolling for all elements */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent text selection on UI elements */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Mobile viewport utilities */
+.mobile-container {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+}
+
+.mobile-safe-area {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Full height utilities that work with mobile browsers */
+.min-h-screen-mobile {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.h-screen-mobile {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Responsive container classes */
+.container-mobile {
+  width: 100%;
+  max-width: 428px; /* iPhone 14 Pro Max width */
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (max-width: 375px) {
+  .container-mobile {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .container-mobile {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Responsive text utilities */
+.text-responsive-sm {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 320px) {
+  .text-responsive-sm {
+    font-size: 0.7rem;
+  }
+}
+
+.text-responsive-base {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 320px) {
+  .text-responsive-base {
+    font-size: 0.8rem;
+  }
+}
+
+/* Fix for iOS viewport units */
+@supports (height: 100dvh) {
+  .min-h-screen-mobile {
+    min-height: 100dvh;
+  }
+  
+  .h-screen-mobile {
+    height: 100dvh;
+  }
+}
+
+/* Prevent zoom on double tap */
+* {
+  touch-action: manipulation;
+}
+
+/* Fix for iOS bounce scrolling */
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#root, [data-reactroot] {
+  width: 100%;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbars while maintaining scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scroll-behavior: smooth;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Custom gradient utilities */
+.gradient-primary {
+  background: linear-gradient(135deg, #a9016d 0%, #740182 100%);
+}
+
+.gradient-primary-hover {
+  background: linear-gradient(135deg, #c451c9 0%, #a9016d 100%);
+}
+
+/* Safe area for bottom navigation */
+.safe-bottom {
+  padding-bottom: 5rem; /* 80px - enough space for bottom navigation */
+}
+
+/* Collapsible animation styles */
+[data-slot="collapsible-content"] {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+[data-slot="collapsible-content"][data-state="closed"] {
+  animation: collapsible-up 0.3s ease-in-out;
+}
+
+[data-slot="collapsible-content"][data-state="open"] {
+  animation: collapsible-down 0.3s ease-in-out;
+}
+
+@keyframes collapsible-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes collapsible-up {
+  from {
+    height: var(--radix-collapsible-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+/* Modal and Dialog animations */
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes modal-out {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+}
+
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backdrop-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Story viewer specific animations */
+@keyframes story-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes story-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+/* Smooth transitions for interactive elements */
+.story-item {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.story-item:hover {
+  transform: scale(1.05);
+}
+
+.story-item:active {
+  transform: scale(0.95);
+}
+
+/* Comment animations */
+.comment-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: comment-slide-in 0.3s ease-out forwards;
+}
+
+@keyframes comment-slide-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Onboarding specific animations */
+@keyframes logo-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(196, 81, 201, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(196, 81, 201, 0.6), 0 0 30px rgba(196, 81, 201, 0.4);
+  }
+}
+
+@keyframes infinity-draw {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+  100% {
+    stroke-dasharray: 200 0;
+  }
+}
+
+@keyframes pulse-primary {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(196, 81, 201, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(196, 81, 201, 0);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Enhanced button animations */
+.btn-primary {
+  background: linear-gradient(135deg, #a9016d 0%, #740182 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(196, 81, 201, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Loading spinner improvements */
+@keyframes spin-glow {
+  from {
+    transform: rotate(0deg);
+    filter: drop-shadow(0 0 5px rgba(196, 81, 201, 0.5));
+  }
+  to {
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 10px rgba(196, 81, 201, 0.8));
+  }
+}
+
+/* Interest selection animations */
+.interest-tag {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interest-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(196, 81, 201, 0.2);
+}
+
+.interest-tag.selected {
+  animation: pulse-primary 2s infinite;
+}
+
+/* Step transition animations */
+.step-transition-enter {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.step-transition-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s ease-out;
+}
+
+.step-transition-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.step-transition-exit-active {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.3s ease-in;
+}
+
+/* Intro animation specific styles */
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(196, 81, 201, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(196, 81, 201, 0.8));
+  }
+}
+
+@keyframes particle-float {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+
+@keyframes feature-spotlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(196, 81, 201, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(196, 81, 201, 0);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(196, 81, 201, 0);
+    transform: scale(1);
+  }
+}
+
+/* 3D perspective animations */
+.intro-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: rotateY(90deg) rotateX(5deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(0deg);
+  }
+  75% {
+    transform: rotateY(270deg) rotateX(-5deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(0deg);
+  }
+}
+
+/* Enhanced gradient backgrounds */
+.gradient-animated {
+  background: linear-gradient(-45deg, #c451c9, #a9016d, #740182, #c451c9);
+  background-size: 400% 400%;
+  animation: gradient-flow 8s ease infinite;
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Smooth morphing transitions */
+@keyframes morph-circle {
+  0%, 100% {
+    border-radius: 50%;
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: scale(1.1) rotate(90deg);
+  }
+  50% {
+    border-radius: 20% 80% 20% 80% / 20% 20% 80% 80%;
+    transform: scale(0.9) rotate(180deg);
+  }
+  75% {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    transform: scale(1.05) rotate(270deg);
+  }
+}
+
+/* Intro Animation CSS-only animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logo-entrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotateY(-10deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) rotateY(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+  }
+}
+
+@keyframes logo-shrink {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(0.6) translateY(-100px);
+  }
+}
+
+@keyframes float-icon {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) rotate(180deg);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes orbit-motion {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+
+@keyframes particle-motion {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0);
+  }
+}
+
+/* Loading Landing specific animations */
+@keyframes logo-entrance-landing {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotateY(-90deg);
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1) rotateY(0deg);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+    filter: blur(0px);
+  }
+}
+
+@keyframes infinite-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.1;
+  }
+}
+
+@keyframes typewriter-glow {
+  0% {
+    text-shadow: 0 0 5px rgba(196, 81, 201, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(196, 81, 201, 0.8), 0 0 25px rgba(196, 81, 201, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(196, 81, 201, 0.5);
+  }
+}
+
+@keyframes opportunity-float {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotate(0deg) scale(0.5);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-5px) rotate(90deg) scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(-15px) rotate(270deg) scale(1.1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateY(0px) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes orbit-trail {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes particle-dance {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) translateX(0px) scale(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-10px) translateX(-10px) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-30px) translateX(10px) scale(1.2);
+  }
+  75% {
+    opacity: 0.6;
+    transform: translateY(-50px) translateX(-5px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) translateX(0px) scale(0);
+  }
+}
+
+/* Simple Door Animation Keyframes */
+@keyframes simple-door-left {
+  0% {
+    transform: perspective(800px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(800px) rotateY(-110deg);
+  }
+}
+
+@keyframes simple-door-right {
+  0% {
+    transform: perspective(800px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(800px) rotateY(110deg);
+  }
+}
+
+@keyframes simple-content-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+
+/* Animation utility classes */
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-logo-entrance {
+  animation: logo-entrance-landing 2s ease-out forwards;
+}
+
+.animate-logo-shrink {
+  animation: logo-shrink 0.8s ease-in-out forwards;
+}
+
+.animate-float-icon {
+  animation: opportunity-float 4s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit-trail 6s linear infinite;
+}
+
+.animate-particle-float {
+  animation: particle-dance 4s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-pulse-primary {
+  animation: infinite-pulse 2s ease-in-out infinite;
+}
+
+.animate-feature-spotlight {
+  animation: feature-spotlight 1.5s ease-out infinite;
+}
+
+/* Simple Door Animation Classes */
+.animate-simple-door-left {
+  animation: simple-door-left 1.2s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.animate-simple-door-right {
+  animation: simple-door-right 1.2s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.animate-simple-content-reveal {
+  animation: simple-content-reveal 0.8s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* Map View slide-up animation */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
